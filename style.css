@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Libre Baskerville', serif;
+	background: linear-gradient(-45deg, #D9AFD9, #97D9E1 , #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.main
+{
+    width: 350px;
+    height: 480px;
+    background: rgb(148, 201, 229);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 30px 50px black;
+}
+#chk
+{
+    display: none;
+}
+.signup
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+label
+{
+    color: white;
+    font-size: 35px;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    margin-bottom: 10px;
+}
+input
+{
+    width: 60%;
+    height: 20px;
+    background: white;
+    justify-content: center;
+    display: flex;
+    margin: 18px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+}
+button
+{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: white;
+    background: rgb(43,83,194);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 18px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: .3s ease-in;
+    cursor: pointer;
+    box-shadow: 5px 20px 40px black;
+}
+button:hover
+{
+    background: rgb(20,57,105);
+}
+.login
+{
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+.login label
+{
+    color: rgb(43,83,194);
+    transform: scale(.6);
+}
+.login p 
+{
+    text-align: center;
+    padding: 20px;
+}
+#chk:checked~.login 
+{
+    transform: translateY(-500px);
+}
+#chk:checked~.login label
+{
+    transform: scale(1);
+} 
+#chk:checked~.signup label
+{
+    transform: scale(.6);
+} 
+#lien
+{
+    color: rgb(43,83,194);
+    font-weight: bold;
+    cursor: pointer;
+}
+#lien:hover
+{
+    letter-spacing: 1px;
+    transition: .5s;
+    color: rgb(66, 106, 217);
+}
+.page2{
+    color: white;
+    text-decoration: none;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px 0;
+}
+.container .card
+{
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    min-width: 240px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+                inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+                5px 5px 15px rgba(0, 0, 0, 0.3),
+                -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.container .card .box
+{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #83cde9;
+    border: 2px solid #5f9ed9;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .box:hover
+{
+    transform: translateY(-50px);
+    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+}
+.container .card .box .content
+{
+    padding: 20px;
+    text-align: center;
+}
+.container .card .box .content h2
+{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.1);
+}
+.container .card .box .content h3
+{
+    font-size: 1.8em;
+    color: black;
+    z-index: 1;
+    transition: 0.5s;
+}
+.container .card .box .content p
+{
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: 0.5s;
+}
+.container .card .box .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #000;
+    margin-top: 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+.container .card:nth-child(1) .box
+{
+    background-image: url("silly.png");
+}
+.container .card:nth-child(2) .box
+{
+    background-image: url("mem.png");
+}
+.container .card:nth-child(3) .box
+{
+    background-image: url("word.png");
+}
+.container .card:nth-child(4) .box
+{
+    background-image: url("pap.jpg");
+}
+.container .card:nth-child(1) .box .content a
+{
+    background: #2196f3;
+}
+.container .card:nth-child(2) .box .content a
+{
+    background: #1c6231;
+}
+.container .card:nth-child(3) .box .content a
+{
+    background: #f4cb26;
+}
+.container .card:nth-child(4) .box .content a
+{
+    background: #4ce415;
+}
+.title
+{
+    width: 9.25em;
+    height: 1.15em;
+    font-size: 4rem;
+    font-family: sans-serif;
+    position: relative;
+}
+.title div {
+    position: absolute;
+    left: 0;
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  
+  .upper {
+    top: 0;
+    height: 52.5%;
+    color: #fff;
+    overflow: hidden;
+    z-index: 3;
+    animation: moveUp 1.5s ease-in-out 1;
+    background-color: #64caec;
+  }
+  
+  .lower {
+    bottom: 0;
+    height: 100%;
+    background: linear-gradient(180deg, #64caec 52.5%, #fff 52.5%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    z-index: 1;
+    animation: moveDown 1.5s ease-in-out 1;
+  }
+  
+  .inside {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
+    text-align: center;
+    z-index: 2;
+    font-size: 1rem;
+    color: #2514dc;
+  }
+  
+  @keyframes moveUp {
+    0%,
+    100% {
+      top: 0;
+    }
+  
+    50%,
+    70% {
+      top: -45px;
+    }
+  }
+  
+  @keyframes moveDown {
+    0%,
+    100% {
+      top: 0;
+    }
+  
+    50%,
+    70% {
+      top: 30px;
+    }
+  }
+  
+  @media (max-width: 424px) {
+    .container {
+      font-size: 2.5rem;
+    }
+  
+    .inside {
+      font-size: 0.75rem;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .container {
+      font-size: 2rem;
+    }
+  
+    .inside {
+      font-size: 0.5rem;
+    }
+  }
+  

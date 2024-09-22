@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup and Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <form name="f1">
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" id="name" name="txt" placeholder="User name" required>
+
+                <input type="email" name="email" id="" placeholder="Email" required>
+                <input type="password" name="pswd" placeholder="Password" id="pswd1" required>
+                <input type="password" name="pswd" placeholder="Confirm password" id="pswd2" required>
+                <button><a href="home.html" class="page2"> Sign up</a></button>
+            </form>
+        </div>
+        <div class="login">
+            <form name="f2">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" id="" placeholder="Email" required>
+                <input type="password" name="pswd" placeholder="Password" id="" required>
+                <button><a href="home.html" class="page2">Login</a> </button>
+                <p>D'ont have account <a href="" id="lien">Create account</a>.</p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

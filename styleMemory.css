@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+body  {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;   
+        min-height: 100vh; 
+
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
+
+
+
+.center
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(82, 168, 255, 0.3);
+  border-radius: 3px;
+  
+}
+.container
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:3px;
+  background: rgb(147, 147, 220);
+  padding: 40px 60px;
+}
+h2
+{
+  font-size: 3em;
+  color: bisque;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.reset
+{
+  padding: 15px 20px;
+  color:rgb(147, 147, 220) ;
+  background:bisque ;
+  border: none;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+}
+.reset:focus
+{
+  background:rgb(110, 110, 220) ;
+  color:bisque ;
+}
+.game
+{
+  width: 430px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+}
+.item
+{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  background: bisque;
+  transform: rotateY(0deg);
+  transition: 0.25s;
+}
+.item.boxOpen
+{
+  transform: rotateY(0deg);
+}
+.item::after
+{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(168, 168, 225);
+  transition: 0.25s;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+
+}
+.boxOpen:after, .boxMatch:after
+{
+  transform: rotateY(180deg);
+}
